@@ -1,4 +1,4 @@
-import {isEqual} from 'https://esm.sh/lodash-es';
+import { ld } from 'https://x.nest.land/deno-lodash@1.0.0/mod.ts';
 
 function twodarray(rows: number, columns: number) {
     const x = new Array(rows);
@@ -62,7 +62,7 @@ function deduplicate(list: Array<Array<number>>) {
             if (idxA === idxB) {
                 break;
             }
-            if (isEqual(a, b)) {
+            if (ld.isEqual(a, b)) {
                 list.splice(idxB, 1)
             }
         }
